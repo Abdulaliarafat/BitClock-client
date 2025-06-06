@@ -8,10 +8,10 @@ import { SiIfood } from 'react-icons/si';
 
 const Navber = () => {
     const link = <>
-        <li><NavLink to='/' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-green-500 hover:text-white'}`}>Home</NavLink></li>
-        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-green-500 hover:text-white'}`}>Fridge</NavLink></li>
-        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-green-500 hover:text-white'}`}>Add Food</NavLink></li>
-        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-green-500 hover:text-white'}`}> My Items</NavLink></li>
+        <li><NavLink to='/' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Fridge</NavLink></li>
+        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Add Food</NavLink></li>
+        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}> My Items</NavLink></li>
     </>
     return ( 
         <div>
@@ -23,10 +23,10 @@ const Navber = () => {
                             <p className='font-semibold text-center ml-10 hover:underline text-white'>📞 61 089 988</p>
                         </div>
                         <div className='hidden md:flex gap-4'>
-                            <FaFacebook className='text-yellow-300 hover:text-green-400' size={25}></FaFacebook>
-                            <FaXTwitter className='text-yellow-300 hover:text-green-400' size={25}></FaXTwitter>
-                            <FaInstagram className='text-yellow-300 hover:text-green-400' size={25}></FaInstagram>
-                            <FaWhatsapp className='text-yellow-300 hover:text-green-400' size={25}></FaWhatsapp>
+                            <FaFacebook className='text-white  hover:text-blue-400' size={25}></FaFacebook>
+                            <FaXTwitter className='text-white hover:text-gray-400' size={25}></FaXTwitter>
+                            <FaInstagram className='text-white hover:text-red-400' size={25}></FaInstagram>
+                            <FaWhatsapp className='text-white hover:text-green-400' size={25}></FaWhatsapp>
                         </div>
                     </div>
                     <div className="dropdown my-2">
@@ -47,8 +47,8 @@ const Navber = () => {
                         <a className="font-bold md:text-3xl text-white">BiteClock</a>
                     </div>
                     <div className="space-x-3 md:space-x-10">
-                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-green-600 hover:text-white hover:rounded-xl'>SignIn</button>
-                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-green-600 hover:text-white hover:rounded-xl'>Register</button>
+                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>SignIn</button>
+                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>Register</button>
                     </div>
                     <div>
                         <IoIosContact size={60} />
