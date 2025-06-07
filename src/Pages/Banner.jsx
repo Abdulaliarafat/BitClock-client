@@ -4,10 +4,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import img1 from '../../public/top-view-cooked-bell-peppers-with-different-seasonings-dark-grey-surface-food-dolma-vegetable-meal-beef.jpg'
-import img2 from '../../public/top-view-fresh-vegetables-greens-sliced-cabbage-carrots-peppers-with-notepad-bright-blue-food-meal-vegetable-lunch-healthy-salad.jpg'
-import img3 from '../../public/front-view-sugar-cookies-with-nuts-jam-light-surface.jpg'
-import img4 from '../../public/fresh-dairy-products.jpg'
+import img1 from '/top-view-cooked-bell-peppers-with-different-seasonings-dark-grey-surface-food-dolma-vegetable-meal-beef.jpg'
+import img2 from '/top-view-fresh-vegetables-greens-sliced-cabbage-carrots-peppers-with-notepad-bright-blue-food-meal-vegetable-lunch-healthy-salad.jpg'
+import img3 from '/front-view-sugar-cookies-with-nuts-jam-light-surface.jpg'
+import img4 from '/fresh-dairy-products.jpg'
 import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {

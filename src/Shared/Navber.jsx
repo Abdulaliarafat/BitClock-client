@@ -2,7 +2,7 @@ import React from 'react';
 import {  FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoIosContact } from 'react-icons/io';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 // import logo from '/Food.jpg'
 import { SiIfood } from 'react-icons/si';
 
@@ -30,7 +30,7 @@ const Navber = () => {
                         </div>
                     </div>
                     <div className="dropdown my-2">
-                        <div tabIndex={0} role="button" className="btn btn-ghost text-white font-bold lg:hidden bg-yellow-500 ml-45 hover:text-green-500">
+                        <div tabIndex={0} role="button" className="btn btn-ghost text-white font-bold lg:hidden bg-yellow-500 ml-45 md:-ml-1 my-2 md:my-4  md:w-[100px] hover:text-green-500">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -47,8 +47,8 @@ const Navber = () => {
                         <a className="font-bold md:text-3xl text-white">BiteClock</a>
                     </div>
                     <div className=" space-x-3 md:space-x-10">
-                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>SignIn</button>
-                        <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>Register</button>
+                        <Link to='/logIn' className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>SignIn</Link>
+                        <Link to='/register' className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>Register</Link>
                     </div>
                     <div>
                         <IoIosContact className='text-white' size={60} />
