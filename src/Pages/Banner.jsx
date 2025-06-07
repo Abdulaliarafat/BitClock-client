@@ -18,7 +18,7 @@ const Banner = () => {
                 loop={true}
                 navigation={true}
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+                autoplay={{ delay: 3000,deleteSpeed:8000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                 modules={[Navigation, Pagination, Autoplay]}>
                 <SwiperSlide>
                     <div className='relative'>
