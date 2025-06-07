@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { use, useState } from 'react';
 import { SiIfood } from 'react-icons/si';
-import { Link } from 'react-router';
-import registerAnimation from '../assets/register.json';
+import { Link, useNavigate } from 'react-router';
+import registerAnimation from '../assets/new register.json';
 import Lottie from 'lottie-react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
+    const { createUser, userProfile, setUser } = use(AuthContext)
+    const navigate=useNavigate()
+    const [error, setError] = useState('')
     const handleRegisterFrom = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -14,12 +19,49 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, photo, email, password)
+        // create user
+        createUser(email, password)
+            .then(result => {
+                const userRes = result.user
+                console.log(userRes)
+                userProfile({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...userRes, displayName: name, photoURL: photo })
+                        Swal.fire({
+                            position: 'center',
+                            icon: "success",
+                            title: "Registration successfully",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate('/')
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            })
+            .catch((error) => {
+                console.log(error)
+                Swal.fire({
+                    position: 'center',
+                    icon: "error",
+                    title: "Please registration first ?",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            });
+        // For password validation
+        const passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+        if (passwordRegExp.test(password) === false) {
+            setError('Password must be at least 6 characters long and include at least one uppercase and one lowercase letter.')
+            return
+        }
     }
     return (
-            <div className="card bg-base-100 w-full max-w-6xl mx-auto shrink-0 shadow-2xl my-6">
-               <div className='grid grid-cols-1 md:grid-cols-2'>
-                 <div className='bg-yellow-100'> 
-               <Lottie animationData={registerAnimation} className='pt-10 '></Lottie>
+        <div className="card bg-base-100 w-full max-w-5xl mx-auto shrink-0 shadow-2xl my-6">
+            <div className='grid grid-cols-1 md:grid-cols-2'>
+                <div className='bg-gray-100'>
+                    <Lottie animationData={registerAnimation} className='pt-17 '></Lottie>
                 </div>
                 <div className="card-body bg-gradient-to-b from-yellow-600 to-gray-300">
                     <div className='flex justify-center items-center'>
@@ -40,18 +82,18 @@ const Register = () => {
                             type="password"
                             name='password'
                             className="input w-full"
-                        //     placeholder="Password"
-                        // pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
-                        // title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
+                            placeholder="Password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
+                            title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
                         />
-                        {/* {error && <p className='font-medium text-md text-red-500'>{error}</p>} */}
+                        {error && <p className='font-medium text-md text-red-500'>{error}</p>}
                         <button type='submit' className="btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-2">Register</button>
-                        <p className='mt-3 font-semibold text-center text-lg'>Already have an account please   ? <Link className='font-bold text-red-500 hover:text-red-600 underline' to='/authLayout/login'>Login</Link>
+                        <p className='mt-3 font-semibold text-center text-lg'>Already have an account please   ? <Link className='font-bold text-red-500 hover:text-red-600 underline' to='/logIn'>Login</Link>
                         </p>
                     </form>
                 </div>
-               </div>
             </div>
+        </div>
     );
 };
 
