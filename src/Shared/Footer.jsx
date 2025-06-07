@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiIfood } from 'react-icons/si';
-import img from '../../public/images.jpeg';
+import img from '../../public/footer.jpg';
 
 
 const Footer = () => {

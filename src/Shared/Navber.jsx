@@ -40,18 +40,18 @@ const Navber = () => {
                         </ul>
                     </div>
                 </div>
-               <div className='bg-green-600'>
-                 <div className='flex justify-around  items-center py-4 border-b-gray-500 border-1'>
+               <div className='bg-green-900'>
+                 <div className='flex justify-evenly items-center py-4 border-b-gray-500 border-1'>
                     <div className='flex justify-center items-center gap-2'>
                         <SiIfood className='text-yellow-400 ' size={60} />
                         <a className="font-bold md:text-3xl text-white">BiteClock</a>
                     </div>
-                    <div className="space-x-3 md:space-x-10">
+                    <div className=" space-x-3 md:space-x-10">
                         <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>SignIn</button>
                         <button className='btn w-20 md:w-30 bg-yellow-500 text-white font-bold hover:bg-orange-500 hover:text-white hover:rounded-xl'>Register</button>
                     </div>
                     <div>
-                        <IoIosContact size={60} />
+                        <IoIosContact className='text-white' size={60} />
                     </div>
                 </div>
                 <div className=" hidden lg:flex justify-evenly items-center py-3">
