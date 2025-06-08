@@ -1,13 +1,14 @@
 import Lottie from 'lottie-react';
 import React, { use, useState } from 'react';
 import { SiIfood } from 'react-icons/si';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import loginAnimation from '../assets/Animation - new login.json'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const LoginPage = () => {
     const { signInUser, googleLogin } = use(AuthContext)
+    const location=useLocation()
     const navgate = useNavigate()
     const [error, setError] = useState('')
     const handleSignIn = (e) => {
@@ -27,8 +28,7 @@ const LoginPage = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navgate('/')
-
+                navgate(`${location.state ? location.state : '/'}`)
             })
             .catch((error) => {
                 console.log(error)

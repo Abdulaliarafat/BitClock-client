@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
     const userProfile = (updateInfo) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, updateInfo)
     }
     const googleLogin=()=>{
