@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Nearly = ({nearly}) => {
-    console.log(nearly)
+    // console.log(nearly)
     return (
         <div className='border-3 border-amber-600 rounded-xl bg-gradient-to-b from-white to-yellow-100 shadow-2xl mx-12 md:mx-8 lg:mx-0 px-4 lg:px-2'>
             <div>

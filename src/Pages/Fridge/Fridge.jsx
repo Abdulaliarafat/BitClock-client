@@ -13,7 +13,7 @@ const Fridge = () => {
                 <Lottie className='w-28 md:w-35 ' animationData={FoodAnimation}></Lottie>
                 <h1 className='font-bold text-2xl md:text-3xl mt-8 text-amber-500'>Test your Favorite Food</h1>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-3 lg:gap-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-3 lg:gap-3'>
                {
                 allFood.map(food=><Food key={food._id} food={food}></Food>)
                }
