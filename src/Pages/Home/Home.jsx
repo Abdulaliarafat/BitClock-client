@@ -5,9 +5,9 @@ import Loading from '../../Shared/Loading';
 import Expired from './Expired';
 
 // NearlyExpo JSON
-const NearlyExpoPromise = fetch('http://localhost:3000/food/nearly').then(res => res.json())
+const NearlyExpoPromise = fetch('http://localhost:3000/food/nearly').then(res => res.json());
 // expired JSON
-const expiredPromise = fetch('http://localhost:3000/food/nearly?type=expired').then(res => res.json())
+const expiredPromise = fetch('http://localhost:3000/food/nearly?type=expired').then(res => res.json());
 
 
 

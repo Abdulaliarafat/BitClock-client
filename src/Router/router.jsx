@@ -10,6 +10,7 @@ import Fridge from '../Pages/Fridge/Fridge';
 import PrivateRoute from '../AuthProvider/PrivateRoute';
 import Loading from '../Shared/Loading';
 import Home from '../Pages/Home/Home';
+import FoodDetails from '../Pages/Fridge/FoodDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,12 @@ const router = createBrowserRouter([
         loader:()=>fetch('http://localhost:3000/food'),
         hydrateFallbackElement:<Loading></Loading>
       },
+      {
+        path:'/foodDetails/:id',
+        Component:FoodDetails,
+        loader:({params})=>fetch(`http://localhost:3000/food/${params.id}`),
+        hydrateFallbackElement:<Loading></Loading>
+      }
     ]
   },
 ]);

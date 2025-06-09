@@ -2,7 +2,7 @@ import React from 'react';
 import BeFore from './BeFore';
 
 const Expired = ({expire}) => {
-    console.log(expire)
+    // console.log(expire)
     return (
         <div className='max-w-5xl mx-auto mb-10 my-25'>
            <h1 className='font-bold text-2xl md:text-3xl mt-8 text-amber-500 mb-10 text-center'>All Ready expired food</h1>
