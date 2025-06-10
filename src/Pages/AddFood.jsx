@@ -62,15 +62,13 @@ const AddFood = () => {
                                 <label className="label font-bold">Food Category</label>
                                 <select name="foodcategory" className="select w-full" required>
                                     <option value="">Select Food Category</option>
-                                    <option value="Dairy">🐄 Dairy </option>
-                                    <option value="Meat">🥩 Meat</option>
-                                    <option value="Vegetables">🥦 Vegetables </option>
-                                    <option value="Snacks">🍩 Snacks</option>
-                                    <option value="Bakery">🍞 Bakery
-                                    </option>
-                                    <option value="Seafood">🐟 Seafood
-                                    </option>
-                                    <option value="Fruits">🍎 Fruits</option>
+                                    <option value="Dairy">🐄Dairy</option>
+                                    <option value="Meat">🥩Meat</option>
+                                    <option value="Vegetables">🥦Vegetables</option>
+                                    <option value="Snacks">🍩Snacks</option>
+                                    <option value="Bakery">🍞Bakery</option>
+                                    <option value="Seafood">🐟Seafood</option>
+                                    <option value="Fruits">🍎Fruits</option>
                                 </select>
                             </fieldset>
                             <fieldset className="fieldset bg-gradient-to-l from-green-50 to-green-100 border-base-300 rounded-box  border p-4">

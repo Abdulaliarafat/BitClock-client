@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Food = ({ food }) => {
-    console.log(food)
+    // console.log(food)
     const expirydate = new Date(food.expirydate)
     const today = new Date()
     const expiration = expirydate < today 

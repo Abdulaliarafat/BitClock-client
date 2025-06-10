@@ -6,7 +6,7 @@ import Lottie from 'lottie-react';
 
 const Fridge = () => {
     const allFood=useLoaderData()
-    console.log(allFood)
+    // console.log(allFood)
     return (
         <div className='max-w-5xl mx-auto mb-10'>
             <div className='flex md:justify-center items-center mb-5'>

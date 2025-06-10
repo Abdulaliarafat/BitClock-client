@@ -5,10 +5,11 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
 const Items = ({ MyItemsPromise }) => {
     const { user } = use(AuthContext)
-    const MyFoods = use(MyItemsPromise)
+    const InitialMyFoods = use(MyItemsPromise)
+    const [MyFoods, setMyFood] = useState(InitialMyFoods)
     // console.log(MyFoods)
-    const navigate=useNavigate()
- const [editingItems,setEditingItems]=useState(null)
+    const navigate = useNavigate()
+    const [editingItems, setEditingItems] = useState(null)
     const handleUpdateFood = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -16,10 +17,11 @@ const Items = ({ MyItemsPromise }) => {
         const UpdareFormData = Object.fromEntries(UpdateData.entries())
         console.log(UpdareFormData)
         // update food items
-        axios.put(`http://localhost:3000/food/${editingItems?._id}`,UpdareFormData)
-        .then(res=>{
-            console.log(res.data)
-             if (res.data.modifiedCount) {
+        axios.put(`http://localhost:3000/food/${editingItems?._id}`, UpdareFormData)
+            .then(res => {
+                // console.log(res.data)
+                document.getElementById('my_modal_4').close()
+                if (res.data.modifiedCount) {
                     Swal.fire({
                         position: 'center',
                         icon: "success",
@@ -28,23 +30,51 @@ const Items = ({ MyItemsPromise }) => {
                         timer: 2000
                     });
                 }
-                //  form.reset()
-                //     navigate('/myItem')
-        })
-        .catch(error=>{
-            console.log(error)
-             Swal.fire({
-                        position: 'center',
-                        icon: "success",
-                        title: "Please try again for Updated !",
-                        showConfirmButton: false,
-                        timer: 2000
-                    });
-        })
+                form.reset()
+                navigate('/myItem')
+            })
+            .catch(error => {
+                console.log(error)
+                Swal.fire({
+                    position: 'center',
+                    icon: "success",
+                    title: "Please try again for Updated !",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            })
 
     }
-    const handleDeleteItems = () => {
+    const handleDeleteItems = (id) => {
 
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+             console.log(result.isConfirmed)
+            if (result.isConfirmed) {
+                axios.delete(`http://localhost:3000/food/${id}`)
+            .then(res => {
+                if(res.data.deletedCount){
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+                const remainingFood=MyFoods.filter(food=>food._id !== id);
+                setMyFood(remainingFood)
+                }
+
+            })
+            .catch(error => {
+                console.log(error)
+            })}
+        });
     }
     return (
         <div className='max-w-5xl mx-auto shadow-2xl bg-gradient-to-t from-yellow-50 to-green-100'>
@@ -95,9 +125,10 @@ const Items = ({ MyItemsPromise }) => {
                                     {Food?.expirydate}
                                 </td>
                                 <td className="block md:table-cell p-2 space-y-2 md:space-y-1">
-                                    <button onClick={() =>{ 
+                                    <button onClick={() => {
                                         setEditingItems(Food)
-                                        document.getElementById('my_modal_4').showModal()}} className="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white btn btn-sm md:btn-md rounded-xl hover:rounded-md">
+                                        document.getElementById('my_modal_4').showModal()
+                                    }} className="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white btn btn-sm md:btn-md rounded-xl hover:rounded-md">
                                         Update
                                     </button>
                                     <button onClick={() => { handleDeleteItems(Food?._id) }} className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white btn btn-sm md:btn-md rounded-xl hover:rounded-md px-5">
@@ -112,7 +143,6 @@ const Items = ({ MyItemsPromise }) => {
             {/* modale for update Food item */}
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="my_modal_4" className="modal">
-                {console.log(editingItems)}
                 <div className="modal-box w-11/12 max-w-5xl  bg-gradient-to-t from-yellow-100 to-green-200">
                     <h1 className='font-bold text-green-400 text-4xl text-center mb-8'>Update your food</h1>
                     <form onSubmit={handleUpdateFood} className='md:px-4 py-2' >
@@ -126,14 +156,12 @@ const Items = ({ MyItemsPromise }) => {
                                 <label className="label font-bold">Food Category</label>
                                 <select name="foodcategory" defaultValue={editingItems?.foodcategory} className="select  w-48 md:w-full " required>
                                     <option value="">Select Food Category</option>
-                                    <option value="Dairy">🐄 Dairy </option>
+                                    <option value="Dairy">🐄 Dairy</option>
                                     <option value="Meat">🥩 Meat</option>
-                                    <option value="Vegetables">🥦 Vegetables </option>
+                                    <option value="Vegetables">🥦 Vegetables</option>
                                     <option value="Snacks">🍩 Snacks</option>
-                                    <option value="Bakery">🍞 Bakery
-                                    </option>
-                                    <option value="Seafood">🐟 Seafood
-                                    </option>
+                                    <option value="Bakery">🍞 Bakery</option>
+                                    <option value="Seafood">🐟 Seafood</option>
                                     <option value="Fruits">🍎 Fruits</option>
                                 </select>
                             </fieldset>
@@ -161,7 +189,7 @@ const Items = ({ MyItemsPromise }) => {
                             <fieldset className="fieldset bg-gradient-to-l from-green-50 to-green-100 border-base-300 rounded-box  border p-4">
                                 <label className="label font-bold">Image URL
                                 </label>
-                                <input type="text" name='photoURL'   defaultValue={editingItems?.photoURL}className="input w-full " placeholder="Enter Image URL" required />
+                                <input type="text" name='photoURL' defaultValue={editingItems?.photoURL} className="input w-full " placeholder="Enter Image URL" required />
                             </fieldset>
                             <fieldset className="fieldset bg-gradient-to-l from-green-50 to-green-200 border-base-300 rounded-box  border p-4 ">
                                 <label className="label font-bold">User Email</label>
@@ -177,7 +205,7 @@ const Items = ({ MyItemsPromise }) => {
                     <div className="modal-action">
                         <form method="dialog">
                             {/* if there is a button, it will close the modal */}
-                            <button className="btn btn-md w-50  mr-16 md:w-md lg:w-2xl md:mr-42 mb-3 bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-red-600 hover:to-red-800">Close</button>
+                            <button className="btn btn-md w-50  mr-16 md:w-md lg:w-2xl md:mr-38 mb-3 bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-red-600 hover:to-red-800">Close</button>
                         </form>
                     </div>
                 </div>

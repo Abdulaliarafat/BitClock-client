@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const BeFore = ({before}) => {
-    console.log(before)
+    // console.log(before)
     return (
          <div className='border-4 border-red-700 rounded-xl bg-gradient-to-b from-white to-red-100 shadow-2xl mx-12 md:mx-8 lg:mx-0 px-4 lg:px-2'>
             <div>
