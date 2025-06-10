@@ -29,7 +29,7 @@ const AddFood = () => {
                         timer: 1500
                     });
                     form.reset()
-                    navigate('/fridge')
+                    navigate('/myItem')
                 }
             })
             .catch(error => {

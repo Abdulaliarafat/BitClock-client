@@ -19,9 +19,14 @@ const router = createBrowserRouter([
     Component: RootLayout,
     errorElement: <Error></Error>,
     children: [
-      { index: true, Component: Home },
+      {
+         index: true, 
+         Component: Home,
+         hydrateFallbackElement:<Loading></Loading>
+         },
       { path: '/logIn', Component: LoginPage },
       { path: '/register', Component: Register },
+
       { path: '/addFood', element: <PrivateRoute><AddFood></AddFood></PrivateRoute> },
       {
         path: '/fridge',

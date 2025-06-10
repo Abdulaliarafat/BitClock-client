@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Compost It",
+    "img": "https://i.ibb.co/KxB4X3Sk/composition-compost-made-rotten-vegetables-23-2149073827.jpg",
+    "link": "https://youtube.com/shorts/wV6pLE-44HI?si=lXWfo4m3lqaRJ5hC",
+    "usefood": "Fruit peels, vegetable scraps, eggshells, coffee grounds",
+    "fartilizerFor": "Vegetables, flowers, herbs",
+    "benefit": "Improves soil health, reduces landfill waste"
+  },
+  {
+    "id": 2,
+    "name": "Feed Animals",
+    "img": "https://i.ibb.co/VYzN9Cn6/photorealistic-scene-poultry-farm-with-people-chickens-23-2151462287.jpg",
+    "link": "https://youtu.be/Fu7H7d_Nom4?si=NY3HFaYckhRtFWSM",
+    "usefood": "Leftover grains, fruits, vegetables (no mold or processed food)",
+    "fartilizerFor": "Indirectly contributes to animal manure, which can fertilize crops",
+    "benefit": "Reduces food waste and provides nutrition for livestock or pets"
+  },
+  {
+    "id": 3,
+    "name": "Use for Cleaning",
+    "img": "https://i.ibb.co/WvG3c8L2/flat-lay-eco-friendly-cleaning-products-with-brushes-lemon-23-2148818453.jpg",
+    "link": "https://youtube.com/shorts/gcNDeqXocn8?si=CUiqetlacrdmZWOs",
+    "usefood": "Citrus peels, vinegar from spoiled wine or fruit",
+    "fartilizerFor": "Not applicable",
+    "benefit": "Natural, chemical-free household cleaner"
+  },
+  {
+    "id": 4,
+    "name": "Beauty Treatments",
+    "img": "https://i.ibb.co/RGBJSP57/man-bathrobe-applying-shaving-foam-face-with-copy-space-23-2148389853.jpg",
+    "link": "https://youtube.com/shorts/nz1YOZpGK9Q?si=CKJ7t0zh4whM-NDd",
+    "usefood": "Avocado skins, banana peels, coffee grounds",
+    "fartilizerFor": "Can be composted later for use on flowers or herbs",
+    "benefit": "Natural exfoliants and skin conditioners"
+  },
+  {
+    "id": 5,
+    "name": "Make Natural Dyes",
+    "img": "https://i.ibb.co/4yCGNtT/high-angle-pigmented-cloth-with-natural-colors-23-2148734276.jpg",
+    "link": "https://youtu.be/dH1vtz_WCis?si=GRS6LbbZbUSs5uUa",
+    "usefood": "Onion skins, beet peels, red cabbage",
+    "fartilizerFor": "Can be composted post-use for use on garden plants",
+    "benefit": "Eco-friendly fabric or craft dye alternative"
+  },
+  {
+    "id": 6,
+    "name": "Garden Pest Control",
+    "img": "https://i.ibb.co/HTCPWhXt/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron-1157-39707.jpg",
+    "link": "https://youtu.be/em5t8bScq9s?si=lniWSsPVDkYdDYZt",
+    "usefood": "Coffee grounds, garlic scraps, chili remnants",
+    "fartilizerFor": "Vegetables, herbs (by protecting them from pests)",
+    "benefit": "Repels pests naturally without chemicals"
+  }
+]
