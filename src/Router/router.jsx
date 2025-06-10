@@ -40,8 +40,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyItem></MyItem>
         </PrivateRoute>,
-      
-      }
+      },
     ]
   },
 ]);
