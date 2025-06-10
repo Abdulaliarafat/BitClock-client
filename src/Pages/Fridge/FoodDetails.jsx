@@ -45,11 +45,11 @@ const FoodDetails = () => {
             <div>
                 <img className='w-70 mx-auto' src={photoURL} alt="" />
             </div>
-            <div className=' px-10 pt-3 space-y-1'>
+            <div className=' px-10 pt-3 space-y-2'>
                 <p className='font-bold text-lg '>Food : {foodtitle}</p>
                 <p className='font-bold text-md'>Category : {foodcategory}</p>
                 <p className='font-medium text-md text-gray-600'>Quantity : {quantity}</p>
-                <div className='flex gap-5'>
+                <div className='md:flex gap-3'>
                     <p className='font-medium text-md text-gray-600'>Expiry : {expirydate}
                     </p>
                     <p><ExpirationCount expirydate={expirydate}></ExpirationCount></p>

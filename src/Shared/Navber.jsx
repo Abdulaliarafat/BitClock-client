@@ -30,7 +30,7 @@ const Navber = () => {
         <li><NavLink to='/' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md  md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Home</NavLink></li>
         <li><NavLink to='/fridge' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Fridge</NavLink></li>
         <li><NavLink to='/addFood'  className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}>Add Food</NavLink></li>
-        <li><NavLink className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}> My Items</NavLink></li>
+        <li><NavLink to='/myItem' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'bg-yellow-500 text-white' : 'hover:bg-orange-500 hover:text-white'}`}> My Items</NavLink></li>
     </>
     return (
         <div>
