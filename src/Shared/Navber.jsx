@@ -49,7 +49,7 @@ const Navber = () => {
                         </div>
                     </div>
                     <div className="dropdown my-2">
-                        <div tabIndex={0} role="button" className="btn btn-ghost text-white font-bold md:hidden bg-yellow-500 ml-45 md:-ml-1 my-2 md:my-4  md:w-[100px] hover:text-green-500">
+                        <div tabIndex={0} role="button" className="btn btn-ghost text-white font-bold md:hidden bg-yellow-500  ml-5 my-2 md:my-4  md:w-[100px] hover:text-green-500">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -79,7 +79,7 @@ const Navber = () => {
                                 <Link to="" className="relative group inline-block">
                                     <img
                                         className="w-15 mr-3 mt-1 bg-white rounded-xl"
-                                        src={user.photoURL}
+                                        src={user?.photoURL}
                                         alt=''
                                     />
                                     <span className="absolute right-4 transform -translate-x-1/2 -top-1.5
@@ -87,8 +87,8 @@ const Navber = () => {
                            opacity-0 group-hover:opacity-100
                            pointer-events-none
                            whitespace-nowrap
-                           transition-opacity duration-300">
-                                        {user.displayName}
+                           transition-opacity duration-300 ">
+                                        {user?.displayName}
                                     </span>
                                 </Link>
                             ) : (
