@@ -5,11 +5,13 @@ import registerAnimation from '../assets/new register.json';
 import Lottie from 'lottie-react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
 
 
 const Register = () => {
     const { createUser, userProfile, setUser } = use(AuthContext)
-    const navigate=useNavigate()
+    const navigate = useNavigate()
+    const[eye,setEye]=useState(false)
     const [error, setError] = useState('')
     const handleRegisterFrom = (e) => {
         e.preventDefault()
@@ -72,24 +74,28 @@ const Register = () => {
                     <form onSubmit={handleRegisterFrom} className="form  space-y-2 px-10 ">
                         <label className="label font-bold text-lg text-white">Name</label>
                         <input type="text" name='name' className="input w-full" placeholder="Name" required />
-                        {/* {error && <p className='text-red-500 font-sans'>{error}</p>} */}
+                        {error && <p className='text-red-500 font-sans'>{error}</p>}
                         <label className="label font-bold text-lg text-white">Photo URL</label>
                         <input type="text" name='photo' className="input w-full" placeholder="Photo URL" required />
                         <label className="label font-bold text-lg text-white">Email</label>
                         <input type="email" name='email' className="input w-full" placeholder="Email" required />
                         <label className="label font-bold text-lg text-white">Password</label>
-                        <input
-                            type="password"
-                            name='password'
-                            className="input w-full"
-                            placeholder="Password"
-                            pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
-                            title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
-                        />
-                        {error && <p className='font-medium text-md text-red-500'>{error}</p>}
-                        <button type='submit' className="btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-2">Register</button>
-                        <p className='mt-3 font-semibold text-center text-lg'>Already have an account please   ? <Link className='font-bold text-red-500 hover:text-red-600 underline' to='/logIn'>Login</Link>
-                        </p>
+                      
+                            <input
+                                type={eye ? 'text' : 'password'}
+                                name='password'
+                                className="input w-full relative"
+                                placeholder="Password"
+                                pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
+                                title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
+                            />
+                            <div onClick={() => setEye(!eye)} className='absolute bottom-32 right-19' >
+                                {eye ? <IoMdEyeOff size={20}></IoMdEyeOff> : <IoMdEye size={20}></IoMdEye>}
+                            </div>
+                            {error && <p className='font-medium text-md text-red-500'>{error}</p>}
+                            <button type='submit' className="btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-2">Register</button>
+                            <p className='mt-3 font-semibold text-center text-lg'>Already have an account please   ? <Link className='font-bold text-red-500 hover:text-red-600 underline' to='/logIn'>Login</Link>
+                            </p>
                     </form>
                 </div>
             </div>

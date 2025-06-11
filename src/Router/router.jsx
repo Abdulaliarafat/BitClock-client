@@ -32,8 +32,8 @@ const router = createBrowserRouter([
       {
         path: '/fridge',
         Component: Fridge,
-        loader: () => fetch('http://localhost:3000/food'),
-        hydrateFallbackElement: <Loading></Loading>
+        // loader: () => fetch('http://localhost:3000/food'),
+        // hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/foodDetails/:id',

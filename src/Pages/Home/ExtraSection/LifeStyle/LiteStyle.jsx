@@ -5,7 +5,7 @@ const LifeStylePromise = fetch('/LifeStyle.json')
                         .then(res => res.json())
 const LiteStyle = () => {
     const data=use(LifeStylePromise)
-    console.log(data)
+    // console.log(data)
     return (
        <div
             className='max-w-6xl mx-auto mb-10 my-18'>

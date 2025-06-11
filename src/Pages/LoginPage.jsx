@@ -9,8 +9,8 @@ import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
 
 const LoginPage = () => {
     const { signInUser, googleLogin } = use(AuthContext)
-    const[eye,setEye]=useState(false)
-    const location=useLocation()
+    const [eye, setEye] = useState(false)
+    const location = useLocation()
     const navgate = useNavigate()
     const [error, setError] = useState('')
     const handleSignIn = (e) => {
@@ -89,20 +89,18 @@ const LoginPage = () => {
                         <label className="label  font-bold text-lg text-white">Email</label>
                         <input type="email" name='email' className="input w-full" placeholder="Email" required />
                         <label className="label font-bold  text-white text-lg">Password</label>
-                       <div className='relative'>
-                         <input
-                       
-                            type={eye ? 'text':'password'}
+
+                        <input
+                            type={eye ? 'text' : 'password'}
                             name='password'
-                            className="input w-full"
+                            className="input w-full relative"
                             placeholder="Password"
                             pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
                             title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
                         />
-                        <div onClick={()=>setEye(!eye)} className='absolute bottom-2 right-4' >
-                           {eye ? <IoMdEyeOff size={20}></IoMdEyeOff>: <IoMdEye size={20}></IoMdEye>}
+                        <div onClick={() => setEye(!eye)} className='absolute bottom-47 right-19' >
+                            {eye ?<IoMdEye size={20}></IoMdEye> : <IoMdEyeOff size={20}></IoMdEyeOff>}
                         </div>
-                       </div>
                         {error && <p className='font-medium text-md text-red-500'>{error}</p>}
                         <button type='submit' className="btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900">Login</button>
                         <button onClick={handleGoogleSignIn} className="btn btn-ghost bg-white text-black border-[#e5e5e5] w-full hover:rounded-2xl">

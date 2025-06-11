@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "motion/react"
 import { FaStar } from 'react-icons/fa';
 const EffectOn = ({food}) => {
-    console.log(food)
+    // console.log(food)
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
