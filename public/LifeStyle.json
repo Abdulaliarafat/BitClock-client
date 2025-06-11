@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Health & Well-being",
+    "description": "Eating fresh food reduces the risk of illness and boosts overall health.",
+    "img": "https://i.ibb.co/s9dHJfF7/young-sportive-man-jogging-field-sunrise-176420-5141.jpg",
+    "link": "https://youtu.be/Bo-rB4QeiZo?si=5O8mNX6R0s6FfFXR",
+    "tags": ["health", "nutrition", "fresh-food"],
+    "importance": 5,
+    "action": "Learn how freshness impacts your health"
+  },
+  {
+    "id": 2,
+    "title": "Mental Clarity",
+    "description": "A tidy food routine clears mental clutter and improves focus.",
+    "img": "https://i.ibb.co/YzjhdWY/man-fishing-lakeside-1161-202.jpg",
+    "link": "https://youtu.be/jSgCo3bvaX0?si=ABTR15-qnp01iL8d",
+    "tags": ["mindfulness", "organization"],
+    "importance": 4,
+    "action": "Start organizing your food storage"
+  },
+  {
+    "id": 3,
+    "title": "Financial Savings",
+    "description": "Avoiding food waste helps you save money on groceries every month.",
+    "img": "https://i.ibb.co/27HrrCWS/jar-with-savings-coins-stack-table-23-2148294845.jpg  ",
+    "link": "https://youtu.be/VaiqGsot5ws?si=nrJRK7QNuTpF939z",
+    "tags": ["budget", "savings", "waste-reduction"],
+    "importance": 5,
+    "action": "See how much you can save by tracking expiry"
+  },
+  {
+    "id": 4,
+    "title": "Environmental Impact",
+    "description": "Reducing food waste lowers your carbon footprint and conserves resources.",
+    "img": "https://i.ibb.co/Pn6YtqQ/Environmental-cost-of-food-waste.webp",
+    "link": "https://youtu.be/ishA6kry8nc?si=MY7GK2rFhJljEPyf",
+    "tags": ["eco-friendly", "sustainability"],
+    "importance": 5,
+    "action": "Explore eco-friendly food habits"
+  },
+  {
+    "id": 5,
+    "title": "Mindful Living",
+    "description": "Tracking what you eat creates awareness and fosters intentional living.",
+    "img": "https://i.ibb.co/BH6Vy8Bq/download-5.jpg",
+    "link": "https://youtu.be/xyQY8a-ng6g?si=E2J1qn0ZO3PZkZD_",
+    "tags": ["lifestyle", "mindfulness"],
+    "importance": 4,
+    "action": "Start your mindful eating journey"
+  },
+  {
+    "id": 6,
+    "title": "Better Time Management",
+    "description": "Meal planning based on expiry dates saves time and reduces stress.",
+    "img": "https://i.ibb.co/PsCvxf9F/fast-diet-concept-assortment-vegetables-fruits-917664-17770.jpg",
+    "link": "https://youtu.be/dl5AGIaz4H0?si=xkUT-8wqDgyp1QMF",
+    "tags": ["productivity", "meal-planning"],
+    "importance": 3,
+    "action": "Try scheduling your meals by expiry"
+  },
+  {
+    "id": 7,
+    "title": "Balanced Diet",
+    "description": "Staying aware of what’s in your fridge helps you eat a more varied and nutritious diet.",
+    "img": "https://i.ibb.co/6c0Tpdjp/smiling-man-holding-red-smoothie-jar-offering-fresh-healthy-food-23-2147855403.jpg",
+    "link": "https://youtu.be/81G22t2UHxA?si=Yw06Kon9GUuqS3sa",
+    "tags": ["nutrition", "healthy-eating"],
+    "importance": 5,
+    "action": "Track your meals for a balanced diet"
+  },
+  {
+    "id": 8,
+    "title": "Social Responsibility",
+    "description": "Conscious eating habits reduce waste and contribute to a more equitable food system.",
+    "img": "https://i.ibb.co/xSw6cf3p/arrangement-leftover-wasted-food-peeled-veggies-symbol-23-2148764788.jpg",
+    "link": "https://youtu.be/3QwbFtbvHCA?si=iIjifzfU2q6tChZ1",
+    "tags": ["ethics", "food-justice"],
+    "importance": 4,
+    "action": "Discover how your habits impact the world"
+  }
+]

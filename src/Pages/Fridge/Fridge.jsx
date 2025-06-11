@@ -3,9 +3,10 @@ import { useLoaderData } from 'react-router';
 import Food from './Food';
 import FoodAnimation from '../../assets/test food.json';
 import Lottie from 'lottie-react';
+import { motion } from 'motion/react'
 
 const Fridge = () => {
-    const allFood=useLoaderData()
+    const allFood = useLoaderData()
     // console.log(allFood)
     return (
         <div className='max-w-5xl mx-auto mb-10'>
@@ -13,11 +14,15 @@ const Fridge = () => {
                 <Lottie className='w-28 md:w-35 ' animationData={FoodAnimation}></Lottie>
                 <h1 className='font-bold text-2xl md:text-3xl mt-8 text-amber-500'>Test your Favorite Food</h1>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-1 md:gap-2 lg:gap-3'>
-               {
-                allFood.map(food=><Food key={food._id} food={food}></Food>)
-               }
-            </div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{duration:0.8,ease:'easeOut'}}
+                className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-1 md:gap-2 lg:gap-4'>
+                {
+                    allFood.map(food => <Food key={food._id} food={food}></Food>)
+                }
+            </motion.div>
         </div>
     );
 };

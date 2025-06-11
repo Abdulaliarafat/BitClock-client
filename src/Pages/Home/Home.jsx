@@ -4,6 +4,7 @@ import Banner from '../Banner';
 import Loading from '../../Shared/Loading';
 import Expired from './Expired';
 import UseExpired from './ExtraSection/UseExpired';
+import LiteStyle from './ExtraSection/LifeStyle/LiteStyle';
 
 // NearlyExpo JSON
 const NearlyExpoPromise = fetch('http://localhost:3000/food/nearly').then(res => res.json());
@@ -22,6 +23,7 @@ const Home = () => {
                 <NearlyExpo nearlyExpo={nearlyExpo}></NearlyExpo>
                 <Expired expire={expire}></Expired>
                 <UseExpired></UseExpired>
+                <LiteStyle></LiteStyle>
             </Suspense>
         </div>
     );
