@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { use } from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiIfood } from 'react-icons/si';
 import img from '/footer.jpg';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 
 const Footer = () => {
+    const { user } = use(AuthContext)
     return (
         <div className='relative'>
             <div className=''>
@@ -52,11 +54,14 @@ const Footer = () => {
                         <div className='mt-2'>
                             <h1 className='font-bold text-2xl text-yellow-400 my-2'>✨ Explore us</h1>
                             <div>
-                                <ul  className='ml-4 md:ml-0'>
+                                <ul className='ml-4 md:ml-0'>
                                     <li><NavLink to='/' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md  md:text-white ${isActive ? 'underline text-white' : ''}`}>Home</NavLink></li>
-                                <li><NavLink to='fridge' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'underline text-white' : ''}`}>Fridge</NavLink></li>
-                                <li><NavLink to='/addFood' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'underline text-white' : ''}`}>Add Food</NavLink></li>
+                                    <li><NavLink to='fridge' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'underline text-white' : ''}`}>Fridge</NavLink></li>
+                                    { user &&
+                                     <>
+                                     <li><NavLink to='/addFood' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'underline text-white' : ''}`}>Add Food</NavLink></li>
                                 <li><NavLink to='/myItem' className={({ isActive }) => `md:px-10 mt-1 py-2 font-bold text-md md:text-white ${isActive ? 'underline text-white' : ''}`}> My Items</NavLink></li>
+                                    </>}
                                 </ul>
                             </div>
                         </div>
