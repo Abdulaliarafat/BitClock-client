@@ -16,7 +16,7 @@ const EffectOn = ({food}) => {
                 <p className='font-semibold text-xl'>Title : {food.title}</p>
                 <p className='font-medium text-md text-gray-600'> <span className='font-bold'>Action :</span> {food.action}</p>
                 <p className='font-medium text-md text-gray-600'>
-                  <span className='font-bold'> Benefit : </span> {food.tags.map(tag=><span >{tag}</span>)}</p>
+                  <span className='font-bold'> Benefit : </span> {food.tags.map((tag,index)=><span key={index} >{tag}</span>)}</p>
                 <p className='font-medium text-md text-gray-600 '>
                     <span className='font-bold'>Description : </span>{food.description}</p>
                 <div className='flex justify-start gap-1 items-center font-medium text-md text-gray-600 '>

@@ -6,6 +6,7 @@ import { Link, NavLink, useNavigate } from 'react-router';
 import { SiIfood } from 'react-icons/si';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import ToggoleBtn from '../../DarkMode/ToggoleBtn';
 
 const Navber = () => {
     const { user, LogOut } = use(AuthContext)
@@ -102,6 +103,7 @@ const Navber = () => {
                     </div>
                     <div className=" hidden md:flex justify-evenly items-center py-3">
                         <ul className="menu menu-horizontal px-1 gap-10">
+                            
                             {link}
                         </ul>
                     </div>

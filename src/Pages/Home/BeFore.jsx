@@ -5,9 +5,22 @@ const BeFore = ({before}) => {
     // console.log(before)
     return (
          <motion.div
-         whileHover={{scale:1.06}}
-         whileTap={{scale:0.95}}
-         transition={{ type: 'spring', stiffness: 300 }}
+        whileHover={{
+                scale: 1.1,
+                rotate: -0,
+                backgroundColor: "#2BB95D",
+                transition: { duration: 0.6 },
+            }}
+            whileTap={{
+                scale: 1.2,
+                rotate: -0,
+                backgroundColor: "#1A7A3E",
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 400,
+                damping:20,
+            }}
           className='border-4 border-red-700 rounded-xl bg-gradient-to-b from-white to-red-100 shadow-2xl mx-12 md:mx-8 lg:mx-0 px-4 lg:px-2'>
             <div>
                 <img className='w-50 h-30 px-2 my-1 mx-auto object-cover' src={before.photoURL} alt="" />

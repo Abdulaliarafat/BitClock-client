@@ -1,12 +1,75 @@
-# React + Vite
+# 🕒 BiteClock - The Food Expiry Tracker System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**BiteClock** is a smart food expiry tracker web app that helps users keep tabs on their food items and get alerts before they expire. It empowers people to reduce food waste, improve food management, and explore better lifestyle habits.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Visit BiteClock client on Netlify](https://your-netlify-url.netlify.app)
+👉 [Visit BiteClock server on Vercel](https://your-netlify-url.netlify.app)
+---
 
-## Expanding the ESLint configuration
+## 🧭 Pages Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔝 Navbar
+A responsive navigation menu to access all major sections.
+
+### 🏠 Home
+- View **nearly expired food** with a “See Details” button.
+- View **expired food** with a “See Details” button.
+- Details page includes:
+  - Food information
+  - **Add Note** feature for reminders or usage ideas
+- 📘 Section: **Best Use of Expired Food** – tips and hacks to reduce waste
+- 🧬 Section: **Food Effect on Lifestyle** – info on nutrition, health, and habits
+- 📊 Section: **Count Tracker** – live count of:
+  - Nearly expired food
+  - Expired food
+
+### ❄️ Fridge
+- Displays **all food items**, regardless of status
+- Sort/filter by expiry date, type, or storage
+
+### ➕ Add Food
+- Form to add new food with:
+  - Name
+  - Category (Eat, Use)
+  - Expiry date
+  - Optional notes
+
+### 🗃️ My Items
+- Shows **user-added food**
+- Edit/delete options
+- Add private notes
+
+### 🔻 Footer
+Includes:
+- **About BiteClock** – mission, purpose
+- **Work For** – sustainability, health, zero waste
+- **Contact** – support email or form
+- **Explore** – links to articles, tips, or updates
+
+---
+
+## 🛠️ Built With
+
+- **React JS** - UI library
+- **Vite** - Blazing fast dev server
+- **TailwindCSS** - Utility-first CSS
+- **DaisyUI** - Prebuilt Tailwind components
+- **React Icons** - Icon library
+- **Framer Motion** - UI animations
+- **Swiper.js** - Sliders for carousels
+- **React CountUp** - Animated number counters
+- **Firebase Authentication** - Secure login/signup
+- **Firebase Access Token** - API protection
+- **Netlify** - Hosting & CI/CD
+
+---
+
+## 🔐 Authentication & Security
+
+- Firebase handles user authentication
+- Access tokens are used to protect API routes
+- Only authenticated users can manage their food items
+
+

@@ -42,11 +42,11 @@ const Fridge = () => {
                 <h1 className='font-bold text-2xl md:text-3xl mt-8 text-amber-500'>Test your Favorite Food</h1>
             </div>
 
-            <div className='flex justify-between items-center'>
-                <div>
+            <div className='md:flex md:flex-row md:mx-6 lg:mx-0 justify-between items-center'>
+                <div className='ml-8 md:ml-0' >
                     <select onChange={e => setCategory(e.target.value)}
-                        className=' w-xs p-2 mb-2 border-3 border-yellow-500 rounded-xl font-bold text-yellow-600' >
-                        <option value="All">All</option>
+                        className='w-51 lg:mx-1 mx-4  md:w-xs p-2 mb-2 lg:mb-5 md:mb-5 border-3 border-yellow-600 rounded-xl font-bold text-yellow-600' >
+                        <option  value="All">All</option>
                         <option value="Dairy">🐄 Dairy</option>
                         <option value="Meat">🥩 Meat</option>
                         <option value="Vegetables">🥦 Vegetables</option>
@@ -57,11 +57,11 @@ const Fridge = () => {
                     </select>
                 </div>
                 {/* Search Box */}
-                <div className='mb-6 flex gap-2 w-md'>
+                <div className='mb-6 ml-12 flex gap-2 md:mx-0 mx-4 md:w-md'>
                     <input
                         type='text'
                         placeholder='Search by title or category'
-                        className='border border-gray-300 px-4 py-2 rounded w-full'
+                        className='border-3 border-yellow-600 rounded-xl font-bold text-yellow-600 px-4 py-2 md:ml-12.5 md:w-74 lg:w-full'
                         value={searchText}
                         onChange={(e) => setSearchText(e.target.value)}
                     />
