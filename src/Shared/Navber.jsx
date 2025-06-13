@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { IoIosContact, IoMdContact } from 'react-icons/io';
+import {  IoMdContact } from 'react-icons/io';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { SiIfood } from 'react-icons/si';
 import { AuthContext } from '../AuthProvider/AuthProvider';

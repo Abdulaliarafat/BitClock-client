@@ -13,7 +13,7 @@ const NearlyExpo = ({ nearlyExpo }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.08, ease: "easeOut" }}
                
-                className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-3 lg:gap-5'>
+                className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-5'>
                 {
                     nearlyExpo.map(nearly => <Nearly key={nearly._id} nearly={nearly}></Nearly>)
                 }

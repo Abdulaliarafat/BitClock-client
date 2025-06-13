@@ -7,9 +7,9 @@ import UseExpired from './ExtraSection/UseExpired';
 import LiteStyle from './ExtraSection/LifeStyle/LiteStyle';
 
 // NearlyExpo JSON
-const NearlyExpoPromise = fetch('http://localhost:3000/food/nearly').then(res => res.json());
+const NearlyExpoPromise = fetch('https://assignment-11-server-steel-six.vercel.app/food/nearly').then(res => res.json());
 // expired JSON
-const expiredPromise = fetch('http://localhost:3000/food/nearly?type=expired').then(res => res.json());
+const expiredPromise = fetch('https://assignment-11-server-steel-six.vercel.app/food/nearly?type=expired').then(res => res.json());
 
 
 

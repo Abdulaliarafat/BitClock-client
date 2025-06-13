@@ -17,7 +17,7 @@ const Items = ({ MyItemsPromise }) => {
         const UpdareFormData = Object.fromEntries(UpdateData.entries())
         console.log(UpdareFormData)
         // update food items
-        axios.put(`http://localhost:3000/food/${editingItems?._id}`, UpdareFormData)
+        axios.put(`https://assignment-11-server-steel-six.vercel.app/food/${editingItems?._id}`, UpdareFormData)
             .then(res => {
                 // console.log(res.data)
                 document.getElementById('my_modal_4').close()
@@ -58,7 +58,7 @@ const Items = ({ MyItemsPromise }) => {
         }).then((result) => {
              console.log(result.isConfirmed)
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:3000/food/${id}`)
+                axios.delete(`https://assignment-11-server-steel-six.vercel.app/food/${id}`)
             .then(res => {
                 if(res.data.deletedCount){
                 Swal.fire({

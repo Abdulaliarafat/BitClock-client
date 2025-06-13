@@ -16,24 +16,27 @@ const Fridge = () => {
     const [searchText, setSearchText] = useState('')
     const fetchFood = async (query = '') => {
         try {
-            axios.get(`http://localhost:3000/food?search=${query}`).then(res => {
-                setLoading(true)
-                setAllFood(res.data)
-            })
+            setLoading(true)
+            const res = await axios.get(`https://assignment-11-server-steel-six.vercel.app/food?search=${query}`)
+            setAllFood(res.data)
+
         }
         catch (error) {
             console.log(error)
         }
+        finally {
+        setLoading(false);
+    }
     }
     useEffect(() => {
         fetchFood();
-    }, [allFood]);
+    }, []);
     const handleSearch = () => {
         fetchFood(searchText);
     };
     // Filtered category
     const [category, setCategory] = useState('All');
-    const FilteredFood = category == 'All' ? allFood : allFood.filter(food=> food.foodcategory === category)
+    const FilteredFood = category == 'All' ? allFood : allFood.filter(foodCategorys => foodCategorys.foodcategory === category)
 
     return (
         <div className='max-w-5xl mx-auto mb-10'>
@@ -46,7 +49,7 @@ const Fridge = () => {
                 <div className='ml-8 md:ml-0' >
                     <select onChange={e => setCategory(e.target.value)}
                         className='w-51 lg:mx-1 mx-4  md:w-xs p-2 mb-2 lg:mb-5 md:mb-5 border-3 border-yellow-600 rounded-xl font-bold text-yellow-600' >
-                        <option  value="All">All</option>
+                        <option value="All">All</option>
                         <option value="Dairy">🐄 Dairy</option>
                         <option value="Meat">🥩 Meat</option>
                         <option value="Vegetables">🥦 Vegetables</option>
@@ -67,7 +70,7 @@ const Fridge = () => {
                     />
                     <button
                         onClick={handleSearch}
-                        className='bg-amber-500 text-white px-4 py-2 rounded'>
+                        className='bg-amber-500 font-semibold text-white px-4 py-2 rounded'>
                         Search
                     </button>
                 </div>

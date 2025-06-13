@@ -6,7 +6,7 @@ const EffectOn = ({food}) => {
     return (
         <motion.div
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 1.07 }}
             transition={{ type: 'spring', stiffness: 300 }}
             className='flex flex-col border-2 border-blue-500 rounded-xl bg-gradient-to-b from-white to-blue-100 shadow-2xl mx-12 md:mx-8 lg:mx-0 px-2 lg:px-2 my-5'>
             <div>
@@ -22,9 +22,7 @@ const EffectOn = ({food}) => {
                 <div className='flex justify-start gap-1 items-center font-medium text-md text-gray-600 '>
                     <span className='font-bold'>importance :</span><FaStar color='gold'></FaStar > {food.importance}</div>
             </div>
-            <a href={food.link}>
-                <button className='btn w-30 ml-10 mb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-700 mt-3 font-bold'>Explore </button>
-            </a>
+                <a href={food.link} className='btn w-30 ml-10 mb-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-700 mt-3 font-bold'>Explore </a>
         </motion.div>
     );
 };

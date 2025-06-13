@@ -89,8 +89,8 @@ const Register = () => {
                                 pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
                                 title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
                             />
-                            <div onClick={() => setEye(!eye)} className='absolute bottom-32 right-19' >
-                                {eye ? <IoMdEyeOff size={20}></IoMdEyeOff> : <IoMdEye size={20}></IoMdEye>}
+                            <div onClick={() => setEye(!eye)} className='absolute md:bottom-32 bottom-39 right-19' >
+                                {eye ? <IoMdEye size={20}></IoMdEye> : <IoMdEyeOff size={20}></IoMdEyeOff>}
                             </div>
                             {error && <p className='font-medium text-md text-red-500'>{error}</p>}
                             <button type='submit' className="btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-2">Register</button>

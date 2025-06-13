@@ -32,13 +32,13 @@ const router = createBrowserRouter([
       {
         path: '/fridge',
         Component: Fridge,
-        // loader: () => fetch('http://localhost:3000/food'),
-        // hydrateFallbackElement: <Loading></Loading>
+        // loader: () => fetch('https://assignment-11-server-steel-six.vercel.app/food'),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/foodDetails/:id',
         Component: FoodDetails,
-        loader: ({ params }) => fetch(`http://localhost:3000/food/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-11-server-steel-six.vercel.app/food/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>
       },
       {

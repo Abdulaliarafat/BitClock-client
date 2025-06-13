@@ -12,7 +12,7 @@ const Nearly = ({nearly}) => {
                 transition: { duration: 0.6 },
             }}
             whileTap={{
-                scale: 1.2,
+                scale: 1.04,
                 rotate: -0,
                 backgroundColor: "#1A7A3E",
             }}

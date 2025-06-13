@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const ExpirationCount = ({ expirydate }) => {
   const calculateTimeLeft = () => {
-    const now = new Date();
-    const expiry = new Date(expirydate);
-    const diff = expiry - now;
+    const now = new Date()
+    const expiry =  new Date(`${expirydate}T23:59:59`);
+    const diff = expiry.getTime() - now.getTime();
 
     if (diff <= 0) return null;
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { useContext } from 'react';
-const axiousInstance = axios.create({ baseURL: 'http://localhost:3000' })
+const axiousInstance = axios.create({ baseURL: 'https://assignment-11-server-steel-six.vercel.app' })
 const useAxiousSecure = () => {
     const { user, LogOut } =useContext(AuthContext);
     axiousInstance.interceptors.request.use(config => {

@@ -89,7 +89,6 @@ const LoginPage = () => {
                         <label className="label  font-bold text-lg text-white">Email</label>
                         <input type="email" name='email' className="input w-full" placeholder="Email" required />
                         <label className="label font-bold  text-white text-lg">Password</label>
-
                         <input
                             type={eye ? 'text' : 'password'}
                             name='password'
@@ -98,7 +97,7 @@ const LoginPage = () => {
                             pattern="^(?=.*[a-z])(?=.*[A-Z]).{6,}$"
                             title="Password must be at least 6 characters long and include at least one uppercase and one lowercase letter."
                         />
-                        <div onClick={() => setEye(!eye)} className='absolute bottom-47 right-19' >
+                        <div onClick={() => setEye(!eye)} className='absolute lg:bottom-47 bottom-52  right-19' >
                             {eye ?<IoMdEye size={20}></IoMdEye> : <IoMdEyeOff size={20}></IoMdEyeOff>}
                         </div>
                         {error && <p className='font-medium text-md text-red-500'>{error}</p>}

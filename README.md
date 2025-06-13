@@ -5,7 +5,7 @@
 ## 🌐 Live Demo
 
 👉 [Visit BiteClock client on Netlify](https://assignment-11-client-side.netlify.app/)
-👉 [Visit BiteClock Server on Vercel](https://your-netlify-url.netlify.app)
+👉 [Visit BiteClock Server on Vercel](https://assignment-11-server-steel-six.vercel.app/)
 ---
 
 ## 🧭 Pages Overview

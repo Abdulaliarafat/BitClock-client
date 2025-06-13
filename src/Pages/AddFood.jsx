@@ -17,7 +17,7 @@ const AddFood = () => {
         const newFormData = Object.fromEntries(formData.entries())
         console.log(newFormData)
         //Axios post in database
-        axios.post('http://localhost:3000/food', newFormData)
+        axios.post('https://assignment-11-server-steel-six.vercel.app/food', newFormData)
             .then(res => {
                 console.log(res.data.insertedId)
                 if (res.data.insertedId) {

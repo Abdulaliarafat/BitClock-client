@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { use } from 'react';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ExpirationCount from '../../Hooks/ExpirationCount';
@@ -10,8 +10,8 @@ const FoodDetails = () => {
     const foods = useLoaderData();
     const { _id, photoURL, noteData, foodtitle, foodcategory, expirydate, quantity, description, } = foods
     // btn css work and status toggole
-    const expirydates = new Date(expirydate)
-    const today = new Date()
+    const expirydates = new Date(expirydate).toISOString().slice(0, 10)
+    const today = new Date().toISOString().slice(0, 10)
     const expirations = expirydates < today
     // add note handelar...
     const handleNote = (e) => {
@@ -21,7 +21,7 @@ const FoodDetails = () => {
         const date = form.date?.value;
         console.log(note, date)
         // patch..
-        axios.patch(`http://localhost:3000/food/${_id}`, { note, date })
+        axios.patch(`https://assignment-11-server-steel-six.vercel.app/food/${_id}`, { note, date })
             .then(res => {
                 console.log(res.data)
                 if (res.data.modifiedCount) {
@@ -83,7 +83,14 @@ const FoodDetails = () => {
                             required />
                     </fieldset>
                     {
-                        user ? <button type='submit' className={` ${expirations ? 'btn hover:rounded-2xl bg-gradient-to-r from-red-500 to-red-600 text-white  hover:bg-gradient-to-r hover:from-red-700 hover:to-red-700 mt-3 font-bold' : 'btn bg-gradient-to-r from-yellow-600 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-yellow-800 hover:to-green-800 font-bold'}}`}>Submit</button> : <button disabled type='submit' className={`bg-gray-500 ${expirations ? ' btn hover:rounded-2xl bg-gradient-to-r from-red-500 to-red-600 text-white  hover:bg-gradient-to-r hover:from-red-700 hover:to-red-700 mt-3 font-bold' : 'btn bg-gradient-to-r from-yellow-600 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-yellow-800 hover:to-green-800 font-bold'}}`}>Submit</button>
+                        user ? <div className='space-x-45 md:space-x-85'>
+                            <Link to='/fridge' type='submit' className={` ${expirations ? 'btn hover:rounded-2xl bg-gradient-to-r from-red-500 to-red-600 text-white  hover:bg-gradient-to-r hover:from-red-700 hover:to-red-700 mt-2 font-bold' : 'btn bg-gradient-to-r from-yellow-600 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-yellow-800 hover:to-green-800 font-bold'}}`}>Submit</Link>
+                        </div>
+                            :
+                            <div className='space-x-45 md:space-x-85'>
+                                <Link disabled type='submit' className={`bg-gray-500 ${expirations ? ' btn hover:rounded-2xl bg-gradient-to-r from-red-500 to-red-600 text-white  hover:bg-gradient-to-r hover:from-red-700 hover:to-red-700  font-bold' : 'btn bg-gradient-to-r from-yellow-600 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-yellow-800 hover:to-green-800 font-bold'}}`}>Submit</Link>
+                            </div>
+
                     }
 
                 </form>
