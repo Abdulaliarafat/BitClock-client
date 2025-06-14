@@ -7,11 +7,27 @@ const ExpirationCount = ({ expirydate }) => {
 
     const nowDateOnly = now.toISOString().slice(0, 10);
     const expiryDateOnly = expiry.toISOString().slice(0, 10);
+  
 
-    if (nowDateOnly >= expiryDateOnly) return null;
+  
 
-    const diff = expiry - now;
-    if (diff <= 0) return null;
+    if (nowDateOnly > expiryDateOnly) {
+      return null
+
+    }
+
+    let diff;
+     
+    if(expiry>=now){
+      diff=expiry-now;
+    }else{
+      diff=now-expiry
+    }
+    
+    if (diff <= 0){
+       console.log("from diff",diff)
+      return null;
+    }
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
@@ -21,6 +37,8 @@ const ExpirationCount = ({ expirydate }) => {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  console.log(timeLeft,"This is time lef")
 
   useEffect(() => {
     const timer = setInterval(() => {
