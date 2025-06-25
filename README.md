@@ -3,6 +3,27 @@
 **BiteClock** is a smart food expiry tracker web app that helps users keep tabs on their food items and get alerts before they expire. It empowers people to reduce food waste, improve food management, and explore better lifestyle habits.
 
 ---
+# Getting Started Locally
+
+# git clone https://github.com/Abdulaliarafat/HobbyHub.git
+ 
+ --
+# cd HobbyHub
+# npm install
+# .env.local
+ 
+ --
+
+------
+# VITE_apiKey=AIzaSyBCxLvCPKYiY25R-RI6HTiSZ7fakkfnsxc
+# VITE_authDomain=assignment-10-c8348.firebaseapp.com
+# VITE_projectId=assignment-10-c8348
+# VITE_storageBucket=assignment-10-c8348.firebasestorage.app
+# VITE_messagingSenderId=639211533516
+# VITE_appId=1:639211533516:web:a139c720e8cf7bb6813e69
+
+------
+# npm run dev
 
 ## 🌐 Live Demo
 
@@ -40,10 +61,6 @@
 | ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white) | Hosting & CI/CD              |
 
 ---
-
-## 🚀 Getting Started Locally
-
-
 ## 🔐 Authentication & Security
 
 - Firebase handles user authentication
