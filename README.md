@@ -5,22 +5,22 @@
 ---
 # Getting Started Locally
 
-# git clone https://github.com/Abdulaliarafat/HobbyHub.git
+# git clone https://github.com/Abdulaliarafat/BitClock-client.git
  
  --
-# cd HobbyHub
+# cd BitClock-client
 # npm install
 # .env.local
  
  --
 
 ------
-# VITE_apiKey=AIzaSyBCxLvCPKYiY25R-RI6HTiSZ7fakkfnsxc
-# VITE_authDomain=assignment-10-c8348.firebaseapp.com
-# VITE_projectId=assignment-10-c8348
-# VITE_storageBucket=assignment-10-c8348.firebasestorage.app
-# VITE_messagingSenderId=639211533516
-# VITE_appId=1:639211533516:web:a139c720e8cf7bb6813e69
+# VITE_API_KEY=AIzaSyBVOrPNyv5-nxNCFNTNk97rP6yxy2wzWBY
+# VITE_AUTH_DOMAIN=assignment-11-37555.firebaseapp.com
+# VITE_PROJECT_ID=assignment-11-37555
+# VITE_STORAGE_BUCKET=assignment-11-37555.firebasestorage.app
+# VITE_MESSAGING_SENDER_ID=89805763135
+# VITE_APP_ID=1:89805763135:web:528943e325602ee740be8a
 
 ------
 # npm run dev
