@@ -3,7 +3,7 @@
 **BiteClock** is a smart food expiry tracker web app that helps users keep tabs on their food items and get alerts before they expire. It empowers people to reduce food waste, improve food management, and explore better lifestyle habits.
 ## 🖼️ Screenshot
 
-![HobbyHub Screenshot](https://i.ibb.co/Nd0RsnQM/Whats-App-Image-2025-06-25-at-15-28-22-e9638cdc.jpg) <!-- Replace with actual image URL -->
+![HobbyHub Screenshot](https://i.ibb.co/v97fRZn/Whats-App-Image-2025-06-25-at-18-31-42-3bc63b13.jpg) <!-- Replace with actual image URL -->
 
 ---
 ---
