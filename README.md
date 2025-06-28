@@ -1,71 +1,60 @@
 # 🕒 BiteClock - The Food Expiry Tracker System
 
 **BiteClock** is a smart food expiry tracker web app that helps users keep tabs on their food items and get alerts before they expire. It empowers people to reduce food waste, improve food management, and explore better lifestyle habits.
+## 🖼️ Screenshot
+
+![HobbyHub Screenshot](https://i.ibb.co/v97fRZn/Whats-App-Image-2025-06-25-at-18-31-42-3bc63b13.jpg) <!-- Replace with actual image URL -->
+
+---
+---
+# Getting Started Locally
+
+# git clone https://github.com/Abdulaliarafat/BitClock-client.git
+ 
+ --
+# cd BitClock-client
+# npm install
+# npm run dev
 
 ## 🌐 Live Demo
 
-👉 [Visit BiteClock client on Netlify](https://assignment-11-client-side.netlify.app/)
-👉 [Visit BiteClock Server on Vercel](https://assignment-11-server-steel-six.vercel.app/)
+🔴 Client: https://assignment-11-client-side.netlify.app/  
+
+🟣 Server: https://assignment-11-server-steel-six.vercel.app/
+
+🔴 GitHub repo link: https://github.com/Abdulaliarafat/BitClock-client
+
 ---
 
 ## 🧭 Pages Overview
 
-### 🔝 Navbar
-A responsive navigation menu to access all major sections.
-
-### 🏠 Home
-- View **nearly expired food** with a “See Details” button.
-- View **expired food** with a “See Details” button.
-- Details page includes:
-  - Food information
-  - **Add Note** feature for reminders or usage ideas
-- 📘 Section: **Best Use of Expired Food** – tips and hacks to reduce waste
-- 🧬 Section: **Food Effect on Lifestyle** – info on nutrition, health, and habits
-- 📊 Section: **Count Tracker** – live count of:
-  - Nearly expired food
-  - Expired food
-
-### ❄️ Fridge
-- Displays **all food items**, regardless of status
-- Sort/filter by expiry date, type, or storage
-
-### ➕ Add Food
-- Form to add new food with:
-  - Name
-  - Category (Eat, Use)
-  - Expiry date
-  - Optional notes
-
-### 🗃️ My Items
-- Shows **user-added food**
-- Edit/delete options
-- Add private notes
-
-### 🔻 Footer
-Includes:
-- **About BiteClock** – mission, purpose
-- **Work For** – sustainability, health, zero waste
-- **Contact** – support email or form
-- **Explore** – links to articles, tips, or updates
+| Page      | Description                                                      |
+|-----------|------------------------------------------------------------------|
+| 🔝 Navbar | Responsive navigation menu to access all major sections          |
+| 🏠 Home   | View nearly expired and expired food, details, notes, tips, count tracker |
+| ❄️ Fridge | Displays all food items with sorting/filtering                   |
+| ➕ Add Food | Form to add new food items with name, category, expiry, notes    |
+| 🗃️ My Items | User-added food list with edit/delete and private notes          |
+| 🔻 Footer | About, sustainability mission, contact info, and resource links  |
 
 ---
 
 ## 🛠️ Built With
 
-- **React JS** - UI library
-- **Vite** - Blazing fast dev server
-- **TailwindCSS** - Utility-first CSS
-- **DaisyUI** - Prebuilt Tailwind components
-- **React Icons** - Icon library
-- **Framer Motion** - UI animations
-- **Swiper.js** - Sliders for carousels
-- **React CountUp** - Animated number counters
-- **Firebase Authentication** - Secure login/signup
-- **Firebase Access Token** - API protection
-- **Netlify** - Hosting & CI/CD
+| Technology          | Description                    |
+|---------------------|--------------------------------|
+| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | UI library                    |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)       | Fast development server      |
+| ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0EA5E9?style=for-the-badge&logo=tailwind-css&logoColor=white) | Utility-first CSS framework   |
+| ![DaisyUI](https://img.shields.io/badge/DaisyUI-%23F4D03F?style=for-the-badge&logo=tailwind-css&logoColor=white) | Tailwind component library    |
+| ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=for-the-badge&logo=react&logoColor=white) | Icon library                 |
+| ![Framer Motion](https://img.shields.io/badge/Framer_Motion-EF476F?style=for-the-badge&logo=framer&logoColor=white) | UI animations                |
+| ![Swiper.js](https://img.shields.io/badge/Swiper.js-007aff?style=for-the-badge&logo=swiper&logoColor=white) | Carousel sliders             |
+| ![React CountUp](https://img.shields.io/badge/React_CountUp-282c34?style=for-the-badge&logo=react&logoColor=61DAFB) | Animated number counters     |
+| ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black) | Authentication & API security|
+| ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white) | Hosting & CI/CD              |
 
 ---
-
 ## 🔐 Authentication & Security
 
 - Firebase handles user authentication
