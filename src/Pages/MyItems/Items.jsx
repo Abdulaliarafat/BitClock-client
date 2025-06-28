@@ -200,7 +200,7 @@ const Items = ({ MyItemsPromise }) => {
                                 <input type="text" name='description' defaultValue={editingItems?.description} className="input w-full h-20" placeholder="Write your description here" required />
                             </fieldset>
                         </div>
-                        <input type="submit" className='btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-4' value="Update group" />
+                        <input type="submit" className='btn  w-full  bg-gradient-to-r from-green-500 to-green-700 text-white hover:rounded-2xl hover:bg-gradient-to-r hover:from-green-700 hover:to-green-900 mt-4' value="Update food" />
                     </form>
                     <div className="modal-action">
                         <form method="dialog">
