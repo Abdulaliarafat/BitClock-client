@@ -6,9 +6,17 @@ import Footer from '../Shared/Footer';
 const RootLayout = () => {
     return (
         <div>
+            <header>
                 <Navber></Navber>
+            </header>
+            <main>
                 <Outlet></Outlet>
+            </main>
+
+            <footer>
                 <Footer></Footer>
+            </footer>
+
         </div>
     );
 };

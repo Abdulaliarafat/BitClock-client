@@ -6,7 +6,11 @@ import Lottie from 'lottie-react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
-
+import { motion } from "motion/react"
+const fadeIn = {
+    hidden: { opacity: 0, y: 18 },
+    visible: { opacity: 1, y: 10 },
+}
 
 const Register = () => {
     const { createUser, userProfile, setUser } = use(AuthContext)
@@ -60,7 +64,15 @@ const Register = () => {
         }
     }
     return (
-        <div className="card bg-base-100 w-full max-w-5xl mx-auto shrink-0 shadow-2xl my-6">
+        <motion.div
+         whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 1.05 }}
+             initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6 ,delay:0.2}}
+         className="card bg-base-100 w-full max-w-5xl mx-auto  shadow-2xl my-15">
             <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className='bg-gray-100'>
                     <Lottie animationData={registerAnimation} className='pt-17 '></Lottie>
@@ -99,7 +111,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

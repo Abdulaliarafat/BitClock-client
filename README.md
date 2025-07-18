@@ -20,7 +20,7 @@
 
 🔴 Client: https://assignment-11-client-side.netlify.app/  
 
-🟣 Server: https://assignment-11-server-steel-six.vercel.app/
+🟣 Server: https://bitclock-server.vercel.app/
 
 🔴 GitHub repo link: https://github.com/Abdulaliarafat/BitClock-client
 

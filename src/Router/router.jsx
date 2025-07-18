@@ -18,34 +18,36 @@ const router = createBrowserRouter([
     path: "/",
     Component: RootLayout,
     errorElement: <Error></Error>,
-    hydrateFallbackElement:<Loading></Loading>,
+    HydrateFallback:Loading,
     children: [
       {
          index: true, 
          Component: Home,
          hydrateFallbackElement:<Loading></Loading>
          },
-      { path: '/logIn', Component: LoginPage },
-      { path: '/register', Component: Register },
+      { path: '/logIn', Component: LoginPage ,HydrateFallback:Loading},
+      { path: '/register', Component: Register ,HydrateFallback:Loading},
 
       { path: '/addFood', element: <PrivateRoute><AddFood></AddFood></PrivateRoute> },
       {
         path: '/fridge',
         Component: Fridge,
-        // loader: () => fetch('https://assignment-11-server-steel-six.vercel.app/food'),
-        hydrateFallbackElement: <Loading></Loading>
+        HydrateFallback:Loading,
+        // loader: () => fetch('https://bitclock-server.vercel.app/food'),
       },
       {
         path: '/foodDetails/:id',
         Component: FoodDetails,
-        loader: ({ params }) => fetch(`https://assignment-11-server-steel-six.vercel.app/food/${params.id}`),
-        hydrateFallbackElement: <Loading></Loading>
+        HydrateFallback:Loading,
+        loader: ({ params }) => fetch(`https://bitclock-server.vercel.app/food/${params.id}`),
+       
       },
       {
         path: '/myItem',
         element: <PrivateRoute>
           <MyItem></MyItem>
         </PrivateRoute>,
+        HydrateFallback:Loading
       },
     ]
   },

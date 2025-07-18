@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { motion } from "motion/react"
+const fadeIn = {
+    hidden: { opacity: 0, y: 18 },
+    visible: { opacity: 1, y: 10 },
+  };
 const Nearly = ({nearly}) => {
     // console.log(nearly)
     return (
         <motion.div
         whileHover={{
-                scale: 1.1,
+                scale: 1.04,
                 rotate: -0,
                 backgroundColor: "#2BB95D",
                 transition: { duration: 0.6 },
@@ -16,11 +20,12 @@ const Nearly = ({nearly}) => {
                 rotate: -0,
                 backgroundColor: "#1A7A3E",
             }}
-            transition={{
-                type: "spring",
-                stiffness: 400,
-                damping:20,
-            }}
+           
+             initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6 ,delay:0.2}}
         className='border-3 border-amber-600 rounded-xl bg-gradient-to-b from-white to-yellow-100 shadow-2xl mx-12 md:mx-8 lg:mx-0 px-4 lg:px-2'>
             <div>
                 <img className='w-50 h-30 px-2 my-1 mx-auto object-cover' src={nearly.photoURL} alt="" />

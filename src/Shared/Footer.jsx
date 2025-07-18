@@ -51,7 +51,7 @@ const Footer = () => {
                                 <FaWhatsapp className=' hover:text-green-400 text-white' size={25}></FaWhatsapp>
                             </div>
                         </div>
-                        <div className='mt-2'>
+                        <div className='mt-10'>
                             <h1 className='font-bold text-2xl text-yellow-400 my-2'>✨ Explore us</h1>
                             <div>
                                 <ul className='ml-4 md:ml-0'>

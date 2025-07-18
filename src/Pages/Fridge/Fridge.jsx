@@ -6,7 +6,6 @@ import { motion } from 'motion/react'
 import axios from 'axios';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 // import { useLoaderData } from 'react-router';
-
 const Fridge = () => {
     const { setLoading } = use(AuthContext)
     // const allFood = useLoaderData()
@@ -17,7 +16,7 @@ const Fridge = () => {
     const fetchFood = async (query = '') => {
         try {
             setLoading(true)
-            const res = await axios.get(`https://assignment-11-server-steel-six.vercel.app/food?search=${query}`)
+            const res = await axios.get(`https://bitclock-server.vercel.app/food?search=${query}`)
             setAllFood(res.data)
 
         }

@@ -6,7 +6,11 @@ import loginAnimation from '../assets/Animation - new login.json'
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
-
+import { motion } from "motion/react"
+const fadeIn = {
+    hidden: { opacity: 0, x: 18 },
+    visible: { opacity: 1, x: 10 },
+}
 const LoginPage = () => {
     const { signInUser, googleLogin } = use(AuthContext)
     const [eye, setEye] = useState(false)
@@ -74,7 +78,15 @@ const LoginPage = () => {
             })
     }
     return (
-        <div className="card bg-base-100 w-full max-w-5xl mx-auto my-5 shrink-0 shadow-2xl">
+        <motion.div
+         whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 1.05 }}
+             initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6 ,delay:0.2}} 
+        className="card bg-base-100 w-full max-w-5xl mx-auto my-15  shadow-2xl">
             <div className='grid grid-cols-1 md:grid-cols-2 '>
                 <div>
                     <Lottie animationData={loginAnimation}></Lottie>
@@ -111,7 +123,7 @@ const LoginPage = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { motion } from 'motion/react'
-
+const fadeIn = {
+    hidden: { opacity: 0, y: 18 },
+    visible: { opacity: 1, y: 10 },
+}
 const Food = ({ food }) => {
     // console.log(food)
     const expirydate = new Date(food.expirydate).toISOString().slice(0, 10)
@@ -10,9 +13,13 @@ const Food = ({ food }) => {
 
     return (
         <motion.div
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 1.03 }}
-            transition={{type:'spring',stiffness:300}}
+             whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 1.05 }}
+             initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6 ,delay:0.2}}
             className={`${expiration ? 'border-4 border-red-700 bg-gradient-to-b from-white to-red-100' : "border-3 border-amber-500 bg-gradient-to-b from-white to-yellow-100"} rounded-xl  shadow-2xl mx-12 md:mx-8 lg:mx-0 px-4 lg:px-2`}>
             <div>
                 <img className='w-50 h-30 px-2 my-1 mx-auto object-cover' src={food.photoURL} alt="" />

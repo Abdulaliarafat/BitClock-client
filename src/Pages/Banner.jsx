@@ -4,10 +4,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import img1 from '/top-view-cooked-bell-peppers-with-different-seasonings-dark-grey-surface-food-dolma-vegetable-meal-beef.jpg'
-import img2 from '/top-view-fresh-vegetables-greens-sliced-cabbage-carrots-peppers-with-notepad-bright-blue-food-meal-vegetable-lunch-healthy-salad.jpg'
-import img3 from '/front-view-sugar-cookies-with-nuts-jam-light-surface.jpg'
-import img4 from '/fresh-dairy-products.jpg'
+import img1 from '../assets/top-view-cooked-bell-peppers-with-different-seasonings-dark-grey-surface-food-dolma-vegetable-meal-beef (1).jpg'
+import img2 from '../assets/top-view-fresh-vegetables-greens-sliced-cabbage-carrots-peppers-with-notepad-bright-blue-food-meal-vegetable-lunch-healthy-salad (1).jpg'
+import img3 from '../assets/front-view-sugar-cookies-with-nuts-jam-light-surface (1).jpg'
+import img4 from '../assets/fresh-dairy-products (1).jpg'
 import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-router';
 import { motion } from "motion/react"
@@ -31,8 +31,8 @@ const Banner = () => {
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         className='relative'>
-                        <img className='w-[500px] md:w-full h-[300px] md:h-[500px] object-cover' src={img1} alt="slide-1" />
-                        <div className='absolute top-20 md:top-60 md:left-50 lg:left-100 space-y-4'>
+                        <img className='w-[500px] md:w-full h-[300px] md:h-[385px] object-cover' src={img1} alt="slide-1" />
+                        <div className='absolute top-20 md:top-30 md:left-50 lg:left-100 space-y-4'>
                             <h1 className='font-bold text-2xl md:text-4xl text-white text-center'>
                                 <Typewriter
                                     words={["Vegetable Snack Deligh"]}
@@ -54,8 +54,8 @@ const Banner = () => {
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         className='relative'>
-                        <img className='w-[500px] md:w-full h-[300px] md:h-[500px] object-cover' src={img2} alt="slide-2" />
-                        <div className='absolute top-20 md:top-60 md:left-50 lg:left-100 space-y-4'>
+                        <img className='w-[500px] md:w-full h-[300px] md:h-[385px] object-cover' src={img2} alt="slide-2" />
+                        <div className='absolute top-20 md:top-30 md:left-50 lg:left-100 space-y-4'>
                             <h1 className='font-bold text-2xl md:text-4xl text-white text-center'>
                                 <Typewriter
                                     words={["Fresh Garden Harvest"]}
@@ -76,8 +76,8 @@ const Banner = () => {
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         className='relative'>
-                        <img className='w-[500px] md:w-full h-[300px] md:h-[500px] object-cover ' src={img3} alt="slide-3" />
-                        <div className='absolute  top-20 md:top-60 md:left-50 lg:left-100  space-y-4'>
+                        <img className='w-[500px] md:w-full h-[300px] md:h-[385px] object-cover ' src={img3} alt="slide-3" />
+                        <div className='absolute  top-20 md:top-30 md:left-50 lg:left-100  space-y-4'>
                             <h1 className='font-bold text-2xl md:text-4xl text-white text-center'>
                                 <Typewriter
                                     words={["Cookie Corn Crunch"]}
@@ -98,8 +98,8 @@ const Banner = () => {
                         whileHover={{ scale: 1.03 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                         className='relative'>
-                        <img className='w-[500px] md:w-full h-[300px] md:h-[500px] object-cover ' src={img4} alt="slide-4" />
-                        <div className='absolute  top-20 md:top-60 md:left-50 lg:left-100  space-y-4'>
+                        <img className='w-[500px] md:w-full h-[300px] md:h-[385px] object-cover ' src={img4} alt="slide-4" />
+                        <div className='absolute  top-20 md:top-30 md:left-50 lg:left-100  space-y-4'>
                             <h1 className='font-bold text-2xl md:text-4xl text-white text-center '>
                                 <Typewriter
                                     words={["Sweet Milky Treat"]}

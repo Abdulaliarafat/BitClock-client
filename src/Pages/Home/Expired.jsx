@@ -7,12 +7,12 @@ const Expired = ({expire}) => {
     // console.log(expire)
     return (
         <div className='max-w-5xl mx-auto mb-10 my-18'>
-           <h1 className='font-bold text-2xl md:text-3xl mt-8 text-amber-500 mb-10 text-center'>Expired food</h1>
-            <p className='btn p-6.5 md:p-8 bg-gradient-to-r from-yellow-300 to-red-300 ml-25 md:ml-87 lg:ml-101 mb-9 text-green-600 font-bold text-xl'>Expired food : <span className='text-2xl'><CountUp  end={expire.length} duration={17}></CountUp></span></p>
+           <h1 className='font-semibold text-xl md:text-3xl mt-8 text-red-500 mb-8 text-center'>Expired food</h1>
+            <p className='btn p-3 md:p-4 bg-gradient-to-r from-yellow-300 to-red-300 ml-34 md:ml-94 lg:ml-107 mb-9 text-red-700 font-semibold text-lg'>Expired food : <span className='text-xl'><CountUp  end={expire.length} duration={17}></CountUp></span></p>
            <motion.div 
            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.09, ease: "easeOut" }}
+            transition={{ duration: 0.05, ease: "easeOut" }}
            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 md:gap-3 lg:gap-5'>
             {
             expire.map(before=><BeFore key={before._id} before={before}></BeFore>)
