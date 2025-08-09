@@ -45,7 +45,7 @@ const Banner = () => {
                                 />
                             </h1>
                             <p className='font-medium test-xs md:font-bold text-white text-center text-balance'>Crunchy, colorful bites served fresh for healthy afternoon snack cravings.</p>
-                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-md ml-38 md:ml-60'>View food</Link>
+                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-400 hover:text-white hover:rounded-xl ml-38 md:ml-60'>View food</Link>
                         </div>
                     </motion.div>
                 </SwiperSlide>
@@ -67,7 +67,7 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 /></h1>
                             <p className='font-medium test-xs md:font-bold text-white text-center text-balance'>Crisp, vibrant vegetables picked straight from the garden for freshness.</p>
-                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-md ml-38 md:ml-50'>View food</Link>
+                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-xl ml-38 md:ml-50'>View food</Link>
                         </div>
                     </motion.div>
                 </SwiperSlide>
@@ -89,7 +89,7 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 /></h1>
                             <p className='font-medium test-xs md:font-bold text-white text-center text-balance'>Golden cookies with sweet corn crunch offer a unique delight.</p>
-                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-md ml-38 md:ml-50'>View food</Link>
+                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-xl ml-38 md:ml-50'>View food</Link>
                         </div>
                     </motion.div>
                 </SwiperSlide>
@@ -111,7 +111,7 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 /></h1>
                             <p className='font-medium test-xs md:font-bold text-white text-center text-balance'>Creamy milk pairs perfectly with soft, sugary traditional sweet treats.</p>
-                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-md ml-38 md:ml-50'>View food</Link>
+                            <Link to='/fridge' className='bg-yellow-500 px-4 py-3 rounded-3xl text-white font-semibold  hover:bg-orange-500 hover:text-white hover:rounded-xl ml-38 md:ml-50'>View food</Link>
                         </div>
                     </motion.div>
                 </SwiperSlide>
