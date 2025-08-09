@@ -41,7 +41,7 @@ const Fridge = () => {
         <div className='max-w-5xl mx-auto mb-10'>
             <div className='flex md:justify-center items-center mb-5'>
                 <Lottie className='w-28 md:w-35 ' animationData={FoodAnimation}></Lottie>
-                <h1 className='font-semibold text-xl md:text-3xl mt-8 text-amber-500'>Test your Favorite Food</h1>
+                <h1 className='font-semibold text-xl md:text-3xl mt-7 text-amber-500'>Test your Favorite Food</h1>
             </div>
 
             <div className='md:flex md:flex-row md:mx-6 lg:mx-0 justify-between items-center'>
