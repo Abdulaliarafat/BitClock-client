@@ -37,7 +37,7 @@ const Navber = () => {
         }
     </>
     return (
-        <div className='sticky top-0 z-10'>
+        <div>
             <div className=" bg-base-100 shadow-xl ">
                 <div className=" bg-black md:px-5 ">
                     <div className='flex justify-between items-center pt-2'>

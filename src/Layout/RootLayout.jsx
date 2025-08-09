@@ -6,7 +6,7 @@ import Footer from '../Shared/Footer';
 const RootLayout = () => {
     return (
         <div>
-            <header>
+            <header className='sticky top-0 z-10' >
                 <Navber></Navber>
             </header>
             <main>
